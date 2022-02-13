@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+  <html lang="ru">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>mySmart</title>
+    </head>
+
+    <body>
+      <script>
+        //Creating a Function - Constructor (Создание функции - конструктора)
+        function mySmart(model, year, price, memory, display, protect)
+        {
+          this.model = model;
+          this.year = year;
+          this.price = price;
+          this.memory = memory;
+
+          this.display = display;
+          this.protect = protect;
+          //Function as an object property inference method (Функция в качестве метода вывода свойств объекта)
+          this.show = function ()
+          {
+            document.write('Предложенный Вами смартфон имеет следующие параметры:<br>');
+
+            for (let i in this)
+            {
+              if (typeof this[i] !== 'function')
+              {
+                document.write(`${i}: ${this[i]}<br>`); 
+              }
+            }
+            document.write('<br>');
+          }
+        }
+        //Declaring required objects and their properties (Объявление необходимых объектов и их свойств)
+        let mySmart1 = new mySmart('Samsung Galaxy S22 Ultra', '2022', '1836$', '512GB', '6.8', 'IP68');
+        let mySmart2 = new mySmart('ASUS ROG Phone 5s ZS676KS', '2021', '1172$', '512GB', '6.78', 'IP42');
+        let mySmart3 = new mySmart('OnePlus 10 Pro', '2022', '1142$', '256Gb', '6.7', 'IP68');
+        
+        // Result output (Вывод результата)
+        mySmart1.show();
+        mySmart2.show();
+        mySmart3.show();
+      </script>
+    </body>
+
+  </html>

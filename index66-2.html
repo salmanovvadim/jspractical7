@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html lang="ru">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Функция вывода значения с использованием параметра</title>
+    </head>
+
+    <body>
+      <script>
+        //Creating an object and entering its properties (Создание объекта и ввода его свойства)
+        let obj = {data1: 'Виталий Валентинович'};
+        //Converting an Object to an Array (Преобразоание объекта в массив)
+        let data = Object.entries(obj);
+        
+        //An example of using the foreach array method calling a function (Пример использованиея метода массива foreach, вызывающего функцию)
+        data.forEach(([key, value]) => {
+          console.log(`Вывод в консоль значения data1 из объекта с помощью его  преобразования в массив и использования метода foreach: ${value}.`);
+        });
+      </script>
+    </body>
+
+  </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+  <html lang="ru">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Функция вывода значения с использованием параметра</title>
+    </head>
+
+    <body>
+      <script>
+        //Arrow function to display result (Стрелочная функция для вывода результата)
+        let vvf = (data) => console.log(`Вывод на экран значения data1 из объекта с использованием Деструктуризации: ${data}.`);
+        //Create an object (Создание объекта)
+        let obj = { data1: 'Виталий Валентинович' };7
+        
+        //Retrieving a Single Value from an Object into a Variable (Извлечение из объекта отдельного значения в переменную)
+        let {data1} = obj;
+        //Outputting the result with a function call (Вывод результата при помощи вызова функции)
+        vvf(data1);
+      </script>
+    </body>
+
+</html>

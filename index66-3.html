@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+  <html lang="ru">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Функция вывода значения с использованием параметра</title>
+    </head>
+
+    <body>
+      <script>
+        //Creating an object and entering its properties (Создание объекта и ввода его свойства)
+        let obj =
+        {
+          //using the get(acts as function0) accessor as a property of an object (использования аксессора get(выступает в качестве функции0) в качестве свойства объекта)
+
+          get vvf()
+          {
+            return this.data1;
+          },
+          //Declaring a New Object Property (Объявления нового войства объекта)
+          data1: 'Виталий Валентинович' 
+        };
+        
+        //Result оutput (Вывод результата)
+        console.log(`Вывод на экран значения data1 из объекта с использованием аксессора get: ${obj.vvf}.`);
+      </script>
+    </body>
+
+  </html>

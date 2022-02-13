@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Произведение двух чисел</title>
+    </head>
+
+    <body>
+      <script>
+        //Arrow function to perform multiplication (Стрелочная функция для осуществления умножения)
+        const mult = (x, y) => x * y;
+        //Entering data for multiplication and checking for correctness (Ввод данных для умножения и их проверка на корректность)
+        let x = prompt('Пожалуйста введите значение первого множителя', '');
+
+        while(isNaN(+x) || x.length == 0 || /[\s+]/g.test(x))
+        {
+          alert('Введенное вами значение первого множителя не является числовым либо вы забыли ввести значение(возможно вами был введен пробел), пожалуйста попробуйте еще раз!');
+          x = prompt('Пожалуйста введите значение первого множителя', '');
+        }
+        let y = prompt('Пожалуйста введите значение второго множителя', '');
+
+        while (isNaN(+y) || y.length == 0 || /[\s+]/g.test(y)) {
+            alert('Введенное вами значение второго множителя не является числовым либо вы забыли ввести значение(возможно вами был введен пробел), пожалуйста попробуйте еще раз!');
+            y = prompt('Пожалуйста введите значение первого множителя', '');
+          }
+          //We enter a variable to display the result of multiplication (Вводим переменную для вывода результата умножения)
+        const string = `The multiplying of ${x} and ${y} is ${mult(x, y)}.`;
+
+        //Checking the correctness of the resulting work (Проверка корректности полученного произведения)
+        if(x * y == Infinity) {
+          console.log('Извините, но произведение введенных вами чисел, выходит за пределы типа данных Number в связи с чем мы не можем отобразить результат!');
+        }
+
+        //Result oytput (Вывод результата)
+        else
+        {
+          console.log(string);
+        }
+      </script>
+    </body>
+    
+  </html>

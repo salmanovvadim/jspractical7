@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+  <html lang="ru">
+    <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Генератор доступа</title>
+    </head>
+
+    <body>
+      <script>
+        //Function to get a dynamic link (Функция для полуения динамической ссылки)
+        function createOAuthString(host, clientId, scope)
+        {
+          return `${host}/login/oauth/authorize?client_id=${clientId}&scope=${scope}`;          
+        }
+        //Variable for getting the ClientID, as well as checking its correctness (Переменная для получения ClientID, а также проверка его корректности)
+        let clientId = prompt('Введите пожалуйста свой clientID', 'salmanovvadim');
+        while (clientId.length == 0 || /[\s+]/g.test(clientId)) {
+          alert('Вы забыли ввести clientID либо случайно ввели пробел, пожалуйста попробуйте еще раз!');
+          clientId = prompt('Введите пожалуйста свой clientID', 'salmanovvadim');        
+        }
+        //Result output (Вывод результата)
+        console.log(`Для перехода к своей странице, пожалуйста кликните по ссылке: ${createOAuthString('https://github.com', clientId, 'repo,user')}`);
+      </script>
+    </body>
+  </html>
